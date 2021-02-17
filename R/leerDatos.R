@@ -9,7 +9,7 @@
 #' @author leosanchezsoler
 
 leer_datos <- function(config, path){
-  lista_csv <- list()
+  lista_df <- list()
   
   for (i in config&data$predictors){
     tryCatch(expr = {
