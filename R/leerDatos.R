@@ -16,7 +16,7 @@ leer_datos <- function(config, path){
       
       path_datos <- paste0(path, 'data/', i)
       datos <- data.table::fread(path_datos, sep = config$sep,
-                                 encoding = 'UTF- 8', data.table = F, header = T)
+                                 encoding = 'UTF-8', data.table = F, header = T)
     
     }, error <- function(e){
       
