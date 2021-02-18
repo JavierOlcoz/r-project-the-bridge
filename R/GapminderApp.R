@@ -1,3 +1,15 @@
+#' @title GapminderApp
+#' 
+#' @description esta función ejecuta el resto de funciones de la carpeta R
+#' 
+#' 
+#' @param path
+#' 
+#' @import logging
+#' @export 
+#' 
+#' @author KapilDM
+
 GapminderApp <- function (path){
   
   tryCatch(expr = {
