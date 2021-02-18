@@ -12,6 +12,7 @@ leer_datos <- function(config, path){
   lista_df <- list()
   
   for (i in config&data$predictors){
+    
     tryCatch(expr = {
       
       path_datos <- paste0(path, 'data/', i)
@@ -25,6 +26,7 @@ leer_datos <- function(config, path){
       stop()
 
     })
+    
     if (nrow(datos) == 0 | ncol(datos) == 0){
       
       logerror('Ha habido un error al leer los datos, comprueba el formato y revisa tu dataset',
@@ -34,7 +36,7 @@ leer_datos <- function(config, path){
     
     lista_df[[i]] <- datos
   }
-  
+
   loginfo('asignando target', logger = 'log')
   
   target <- leer_target(config, path)
