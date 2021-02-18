@@ -1,5 +1,5 @@
 Package: Rproject
-Title: Economic_growth 
+Title: GapminderApp
 Version: 0.1
 Authors: Javier Olcoz, Kapil Dadlani, Leonardo Sánchez
 Description: Este paquete entrena un algoritmo de predicción que trata de realizar una predicción mediante datos sobre salud
