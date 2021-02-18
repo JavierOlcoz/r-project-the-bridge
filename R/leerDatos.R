@@ -9,7 +9,7 @@
 #' @author leosanchezsoler
 
 leer_datos <- function(config, path){
-  lista_csv <- list()
+  lista_df <- list()
   
   for (i in config&data$predictors){
     
@@ -17,7 +17,7 @@ leer_datos <- function(config, path){
       
       path_datos <- paste0(path, 'data/', i)
       datos <- data.table::fread(path_datos, sep = config$sep,
-                                 encoding = 'UTF- 8', data.table = F, header = T)
+                                 encoding = 'UTF-8', data.table = F, header = T)
     
     }, error <- function(e){
       
@@ -39,7 +39,7 @@ leer_datos <- function(config, path){
 
   loginfo('asignando target', logger = 'log')
   
-  target <- read_target(config, path)
+  target <- leer_target(config, path)
   
   lista_pred_target <- list(predictoras = lista_df, target = target)
   
@@ -76,4 +76,3 @@ leer_target <- function(config, path){
     })
   return(target)
 }
-
