@@ -38,7 +38,7 @@ leer_datos <- function(config, path){
     lista_df[[i]] <- datos
     
   }
-  loginfo("hola", logger = 'log')
+  loginfo("Leyendo target", logger = 'log')
   
   target <- leer_target(config, path)
   

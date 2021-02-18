@@ -29,7 +29,7 @@ GapminderApp <- function (path){
     
     #Generar output
     loginfo("Generar output", logger = 'log')
-    createOutput(output, config, path)
+    createOutput(output, path)
     loginfo("Output generado", logger = 'log')
     
   }, error = function(e){

@@ -1,0 +1,16 @@
+2021-02-18 12:40:41 INFO:log:Inicio programa
+2021-02-18 12:40:41 INFO:log:Leyendo config
+2021-02-18 12:40:41 INFO:log:Config readed.
+2021-02-18 12:40:41 INFO:log:Config leido
+2021-02-18 12:40:41 INFO:log:Leyendo datos
+2021-02-18 12:40:41 INFO:log:Leyendo target
+2021-02-18 12:40:41 INFO:log:Datos leidos
+2021-02-18 12:40:41 INFO:log:Reconvirtiendo los datos
+2021-02-18 12:40:41 INFO:log:Datos reconvertidos
+2021-02-18 12:40:41 INFO:log:Cargando en modelo de ML
+2021-02-18 12:40:43 INFO:log:Descripción del modelo:
+2021-02-18 12:40:43 INFO:log:Métricas del modelo:
+2021-02-18 12:40:43 INFO:log:Modelo de ML generado
+2021-02-18 12:40:43 INFO:log:Generar output
+2021-02-18 12:40:43 INFO:log:Output generado
+2021-02-18 12:40:43 INFO:log:Fin de la ejecucion.

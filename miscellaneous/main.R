@@ -1,7 +1,8 @@
 # main
 
 # directory set up
-path <- getwd()
+path1 <- getwd()
+path <- paste0(path1, "/")
 
 setwd(path)
 
