@@ -6,7 +6,9 @@
 #' 
 #' @import XML
 #' @import logging
-
+#' 
+path = 'C:/Users/usuario/Desktop/alumno_data_sciece/data_science/r-project-the-bridge/'
+library(logging)
 
 read_config <- function (path){
   
@@ -139,3 +141,7 @@ validateConfigNodes <- function(config){
   }
   
 }
+
+
+x = read_config(path)
+print(x)
