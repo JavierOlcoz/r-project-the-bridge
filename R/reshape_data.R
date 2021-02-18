@@ -8,7 +8,7 @@
 #' @return
 #' 
 #' @import logging
-
+#' 
 reshape_data <- function(config, lista_pred_target){
   
   
@@ -47,6 +47,3 @@ reshape_data <- function(config, lista_pred_target){
   return(list(datos, predict_Y))
   
 }
-
-l = reshape(x,h1)
-print(l)

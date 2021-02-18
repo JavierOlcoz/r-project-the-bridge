@@ -77,6 +77,3 @@ leer_target <- function(config, path){
     })
   return(target)
 }
-
-h1 = leer_datos(x, path)
-print(h1)
