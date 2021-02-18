@@ -5,6 +5,7 @@
 #' @param df_1
 #' @param config
 #' 
+#' @import caret
 #' @author leosanchezsoler
 #' 
 #' @return output
