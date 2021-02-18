@@ -6,7 +6,7 @@
 #' 
 #' @import XML
 #' @import logging
-
+#' 
 
 read_config <- function (path){
   

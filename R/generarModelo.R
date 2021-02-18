@@ -15,7 +15,7 @@ entrenar_modelo <- function(df_1, config){
   
   library(caret)
 
-  df_origen <- data.frame(df_1[1])
+  df_orig <- data.frame(df_1[1])
   y_pred <- data.frame(df_1[2])
   # Separacion del train y test
   validation_index <- createDataPartition(df_orig[, ncol(df_orig)], p=0.80, list=FALSE)
@@ -34,7 +34,7 @@ entrenar_modelo <- function(df_1, config){
   
   RMSE <- sqrt(mean((predict_test - test_df[, ncol(train_df)])^2))
   
-  resultado <- predict(model, predict_y) 
+  resultado <- predict(model, y_pred) 
   y_pred[, ncol(y_pred)] <- resultado
   output <- y_pred
   return(output)

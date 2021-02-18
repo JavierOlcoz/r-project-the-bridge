@@ -18,14 +18,16 @@ reshape_data <- function(config, lista_pred_target){
     lista_pred_target$predictoras[[i]] <- reshape2::melt(data = lista_pred_target$predictoras[[i]], 
                                                    id.vars = 'country', 
                                                    measure.vars = col[!(col %in% "country")],
-                                                   value.name = config$data$predictors[i])
+                                                   value.name = config$data$predictors[i]
+                                                   )
   }
   
   col = colnames(lista_pred_target$target)
   lista_pred_target$target <- reshape2::melt(data = lista_pred_target$target,
                                        id.vars = 'country',
                                        measure.vars = col[!(col %in% "country")],
-                                       value.name = config$data$target)
+                                       value.name = config$data$target
+                                       )
   
   
   

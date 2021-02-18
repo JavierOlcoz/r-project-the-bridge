@@ -9,35 +9,36 @@
 #' @author leosanchezsoler
 
 leer_datos <- function(config, path){
+  
   lista_df <- list()
   
-  for (i in config&data$predictors){
+  for (i in config$data$predictors){
     
     tryCatch(expr = {
+      pathDatos <- paste0(path, 'data/', i)
+      datos <- data.table::fread(pathDatos, sep = config$sep,
+                                 encoding = 'UTF-8', data.table = FALSE, header = T)
       
-      path_datos <- paste0(path, 'data/', i)
-      datos <- data.table::fread(path_datos, sep = config$sep,
-                                 encoding = 'UTF-8', data.table = F, header = T)
-    
-    }, error <- function(e){
       
-        logerror('No se ha encontrado ningún dataset la ruta. Por favor, compruébalo y revisa config.xml',
-                 logger = 'log')
-      stop()
-
-    })
-    
-    if (nrow(datos) == 0 | ncol(datos) == 0){
+    }, error = function(e){
       
-      logerror('Ha habido un error al leer los datos, comprueba el formato y revisa tu dataset',
+      logerror("Data was not found on the path. Check the direction and the config",
                logger = 'log')
       stop()
+    })
+    
+    if(nrow(datos) == 0 | ncol(datos) == 0){
+      
+      logerror("Data was read poorly, check data format.",
+               logger = 'log')
+      stop()
+      
     }
     
     lista_df[[i]] <- datos
+    
   }
-
-  loginfo('asignando target', logger = 'log')
+  loginfo("hola", logger = 'log')
   
   target <- leer_target(config, path)
   
